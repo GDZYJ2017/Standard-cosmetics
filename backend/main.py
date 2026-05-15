@@ -2,8 +2,14 @@ import os
 import sys
 import logging
 
-# 确保项目根目录在 path 中
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Railway 环境中，工作目录已经是 backend/，不需要添加路径
+# 本地开发时，确保从项目根目录运行
+if os.getenv('RAILWAY_ENVIRONMENT') or os.path.exists('/app'):
+    # Railway 环境：直接使用相对导入
+    pass
+else:
+    # 本地开发环境：添加项目根目录到 path
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
