@@ -44,11 +44,33 @@ git commit -m "%commit_msg%"
 echo.
 
 echo [4/5] 推送到 GitHub...
-git push -u origin main
-if %errorlevel% neq 0 (
-    echo [错误] 推送失败，请检查网络连接和仓库地址
+
+REM 获取当前分支名称
+for /f "tokens=*" %%i in ('git branch --show-current') do set CURRENT_BRANCH=%%i
+
+if "%CURRENT_BRANCH%"=="" (
+    echo [错误] 未检测到当前分支
     pause
     exit /b 1
+)
+
+echo [信息] 当前分支: %CURRENT_BRANCH%
+
+REM 如果是 master 分支，尝试推送到 origin master
+git push -u origin %CURRENT_BRANCH%
+if %errorlevel% neq 0 (
+    echo.
+    echo [提示] 首次推送失败，尝试强制推送...
+    git push -u origin %CURRENT_BRANCH% --force
+    if %errorlevel% neq 0 (
+        echo [错误] 推送失败，请检查：
+        echo   1. 网络连接是否正常
+        echo   2. GitHub 仓库地址是否正确
+        echo   3. 是否有仓库推送权限
+        echo   4. 如果是私有仓库，是否已配置 SSH 或 Personal Access Token
+        pause
+        exit /b 1
+    )
 )
 echo.
 
