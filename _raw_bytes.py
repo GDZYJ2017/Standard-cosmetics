@@ -1,0 +1,15 @@
+with open('c:/Users/dell/WorkBuddy/Claw/backend/services/ai_service.py', 'rb') as f:
+    content = f.read()
+lines = content.split(b'\n')
+print(f'Line 326 raw bytes: {lines[325]}')
+print(f'Line 327 raw bytes: {lines[326]}')
+print(f'Line 328 raw bytes: {lines[327]}')
+print(f'Line 329 raw bytes: {lines[328]}')
+print(f'Line 330 raw bytes: {lines[329]}')
+print(f'Line 331 raw bytes: {lines[330]}')
+print(f'Line 332 raw bytes: {lines[331]}')
+print()
+# Also check line 365
+print(f'Line 365 raw bytes: {lines[364]}')
+print(f'Line 366 raw bytes: {lines[365]}')
+print(f'Line 367 raw bytes: {lines[366]}')

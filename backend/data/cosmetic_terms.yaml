@@ -1,0 +1,328 @@
+# 化妆品/牙膏检验方法专业术语库
+# 基于国家药监局已发布检验方法文档整理
+
+# ============================================================
+# 仪器设备类
+# ============================================================
+instruments:
+  - term: "液相色谱-三重四极杆质谱联用仪"
+    aliases: ["LC-MS/MS", "LC-MS", "液质联用仪", "三重四极杆质谱", "高效液相色谱-质谱联用仪"]
+    category: "仪器"
+  - term: "高效液相色谱仪"
+    aliases: ["HPLC", "液相色谱仪", "高效液相"]
+    category: "仪器"
+  - term: "气相色谱-质谱联用仪"
+    aliases: ["GC-MS", "气质联用仪", "气相色谱质谱"]
+    category: "仪器"
+  - term: "气相色谱仪"
+    aliases: ["GC", "气相色谱"]
+    category: "仪器"
+  - term: "离子色谱仪"
+    aliases: ["IC", "离子色谱"]
+    category: "仪器"
+  - term: "氟离子选择电极"
+    aliases: ["氟电极", "氟离子电极"]
+    category: "仪器"
+  - term: "电喷雾离子源"
+    aliases: ["ESI", "Electrospray Ionization"]
+    category: "离子源"
+  - term: "电子轰击电离源"
+    aliases: ["EI", "Electron Impact"]
+    category: "离子源"
+  - term: "大气压化学电离源"
+    aliases: ["APCI", "Atmospheric Pressure Chemical Ionization"]
+    category: "离子源"
+  - term: "氢火焰离子化检测器"
+    aliases: ["FID", " Flame Ionization Detector"]
+    category: "检测器"
+  - term: "紫外检测器"
+    aliases: ["UV", "紫外检测"]
+    category: "检测器"
+  - term: "二极管阵列检测器"
+    aliases: ["DAD", "PDA", "二极管阵列"]
+    category: "检测器"
+  - term: "电子天平"
+    aliases: ["分析天平", "精密天平"]
+    category: "仪器"
+  - term: "超声波清洗器"
+    aliases: ["超声波提取器", "超声清洗器", "超声波振荡器"]
+    category: "仪器"
+  - term: "离心机"
+    aliases: ["高速离心机"]
+    category: "仪器"
+  - term: "涡旋混合器"
+    aliases: ["涡旋振荡器", "涡旋混匀器", "旋涡混合器"]
+    category: "仪器"
+  - term: "氮吹仪"
+    aliases: ["氮气吹扫仪", "浓缩仪", "旋转蒸发仪"]
+    category: "仪器"
+  - term: "移液器"
+    aliases: ["微量移液器", "移液枪", "单道移液器", "多道移液器"]
+    category: "仪器"
+  - term: "容量瓶"
+    aliases: ["单标线容量瓶"]
+    category: "器具"
+  - term: "比色管"
+    aliases: ["纳氏比色管", "具塞比色管"]
+    category: "器具"
+  - term: "0.22μm微孔滤膜"
+    aliases: ["0.22微孔滤膜", "0.22μm滤膜", "0.22微米滤膜"]
+    category: "耗材"
+  - term: "0.45μm微孔滤膜"
+    aliases: ["0.45微孔滤膜", "0.45μm滤膜"]
+    category: "耗材"
+  - term: "固相萃取柱"
+    aliases: ["SPE柱", "固相萃取"]
+    category: "耗材"
+
+# ============================================================
+# 化学试剂类
+# ============================================================
+reagents:
+  - term: "乙腈"
+    aliases: ["acetonitrile", "CH₃CN"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "甲醇"
+    aliases: ["methanol", "CH₃OH"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "甲酸"
+    aliases: ["formic acid", "HCOOH"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "乙酸"
+    aliases: ["acetic acid", "CH₃COOH"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "正己烷"
+    aliases: ["n-hexane", "己烷"]
+    category: "有机溶剂"
+    note: "应标注色谱纯或分析纯"
+  - term: "二氯甲烷"
+    aliases: ["dichloromethane", "CH₂Cl₂"]
+    category: "有机溶剂"
+    note: "应标注色谱纯或分析纯"
+  - term: "四氢呋喃"
+    aliases: ["THF", "tetrahydrofuran"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "异丙醇"
+    aliases: ["isopropanol", "2-propanol"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "丙酮"
+    aliases: ["acetone", "CH₃COCH₃"]
+    category: "有机溶剂"
+    note: "应标注色谱纯"
+  - term: "石油醚"
+    aliases: ["petroleum ether"]
+    category: "有机溶剂"
+    note: "应标注分析纯，通常为30~60℃沸程"
+  - term: "无水硫酸钠"
+    aliases: ["sodium sulfate", "Na₂SO₄"]
+    category: "无机试剂"
+    note: "应标注分析纯"
+  - term: "氯化钠"
+    aliases: ["sodium chloride", "NaCl", "食盐"]
+    category: "无机试剂"
+    note: "应标注分析纯"
+  - term: "磷酸二氢钾"
+    aliases: ["KH₂PO₄", "potassium dihydrogen phosphate"]
+    category: "无机试剂"
+  - term: "甲酸铵"
+    aliases: ["ammonium formate", "HCOONH₄"]
+    category: "缓冲盐"
+  - term: "乙酸铵"
+    aliases: ["ammonium acetate", "CH₃COONH₄"]
+    category: "缓冲盐"
+  - term: "氢氧化钠"
+    aliases: ["sodium hydroxide", "NaOH"]
+    category: "无机试剂"
+  - term: "盐酸"
+    aliases: ["hydrochloric acid", "HCl"]
+    category: "无机试剂"
+  - term: "氨水"
+    aliases: ["ammonia solution", "NH₃·H₂O"]
+    category: "无机试剂"
+  - term: "乙醇"
+    aliases: ["ethanol", "alcohol", "C₂H₅OH"]
+    category: "有机溶剂"
+    note: "应标注分析纯或色谱纯"
+  - term: "超纯水"
+    aliases: ["纯水", "去离子水", "Milli-Q水", "一级水"]
+    category: "溶剂"
+  - term: "标准品"
+    aliases: ["对照品", "标准物质", "标准样品", "reference standard", "CRM"]
+    category: "标准物质"
+  - term: "内标"
+    aliases: ["内标物", "internal standard", "IS"]
+    category: "标准物质"
+  - term: "标准储备液"
+    aliases: ["储备液", "stock solution"]
+    category: "标准溶液"
+  - term: "标准工作溶液"
+    aliases: ["工作液", "working solution"]
+    category: "标准溶液"
+  - term: "标准曲线"
+    aliases: ["校准曲线", "calibration curve"]
+    category: "概念"
+
+# ============================================================
+# 计量单位类
+# ============================================================
+units:
+  - term: "µg/mL"
+    aliases: ["微克每毫升", "μg/mL", "ug/mL"]
+    category: "浓度单位"
+  - term: "ng/mL"
+    aliases: ["纳克每毫升", "ng/ml"]
+    category: "浓度单位"
+  - term: "mg/kg"
+    aliases: ["毫克每千克", "ppm"]
+    category: "浓度单位"
+  - term: "µg/g"
+    aliases: ["微克每克", "μg/g", "ug/g"]
+    category: "浓度单位"
+  - term: "mg/L"
+    aliases: ["毫克每升"]
+    category: "浓度单位"
+  - term: "µg/L"
+    aliases: ["微克每升", "μg/L"]
+    category: "浓度单位"
+  - term: "r/min"
+    aliases: ["rpm", "转每分", "转/分"]
+    category: "转速单位"
+  - term: "m/z"
+    aliases: ["质荷比", "mass-to-charge ratio"]
+    category: "质谱单位"
+  - term: "eV"
+    aliases: ["电子伏特", "electron volt"]
+    category: "能量单位"
+  - term: "kPa"
+    aliases: ["千帕", "kilopascal"]
+    category: "压力单位"
+  - term: "MPa"
+    aliases: ["兆帕", "megapascal"]
+    category: "压力单位"
+  - term: "mL/min"
+    aliases: ["毫升每分钟", "ml/min"]
+    category: "流速单位"
+  - term: "μL"
+    aliases: ["微升", "ul", "µl"]
+    category: "体积单位"
+  - term: "mm"
+    aliases: ["毫米"]
+    category: "长度单位"
+  - term: "μm"
+    aliases: ["微米", "um"]
+    category: "长度单位"
+
+# ============================================================
+# 操作术语类
+# ============================================================
+operations:
+  - term: "精确称取"
+    aliases: ["精密称取", "准确称取"]
+    category: "称量操作"
+  - term: "精确至"
+    aliases: ["准确至"]
+    category: "精度要求"
+  - term: "精密移取"
+    aliases: ["准确移取", "精确吸取"]
+    category: "移液操作"
+  - term: "涡旋混匀"
+    aliases: ["涡旋", "涡旋振荡", "旋涡混合"]
+    category: "混合操作"
+  - term: "超声提取"
+    aliases: ["超声", "超声波提取", "超声处理"]
+    category: "提取操作"
+  - term: "离心"
+    aliases: ["离心分离"]
+    category: "分离操作"
+  - term: "过滤"
+    aliases: []
+    category: "分离操作"
+  - term: "氮吹浓缩"
+    aliases: ["氮吹", "氮气吹扫", "吹氮浓缩"]
+    category: "浓缩操作"
+  - term: "固相萃取"
+    aliases: ["SPE", "固相提取"]
+    category: "净化操作"
+  - term: "临用现配"
+    aliases: ["现配现用", "临用配制"]
+    category: "配制要求"
+  - term: "定容"
+    aliases: []
+    category: "配制操作"
+  - term: "稀释"
+    aliases: ["逐级稀释", "系列稀释"]
+    category: "配制操作"
+  - term: "取样"
+    aliases: ["称样", "采样", "取样量"]
+    category: "前处理操作"
+  - term: "均质"
+    aliases: ["匀浆", "均质化"]
+    category: "前处理操作"
+
+# ============================================================
+# 专业概念类
+# ============================================================
+concepts:
+  - term: "检出限"
+    aliases: ["LOD", "limit of detection", "检测限"]
+    category: "方法学参数"
+  - term: "定量下限"
+    aliases: ["LOQ", "limit of quantitation", "最低定量浓度"]
+    category: "方法学参数"
+  - term: "检出浓度"
+    aliases: ["CCα", "检出水平"]
+    category: "方法学参数"
+  - term: "最低定量浓度"
+    aliases: ["CCβ", "定量浓度"]
+    category: "方法学参数"
+  - term: "回收率"
+    aliases: ["加标回收率", "recovery"]
+    category: "方法学参数"
+  - term: "精密度"
+    aliases: ["precision", "重复性", "再现性"]
+    category: "方法学参数"
+  - term: "相对标准偏差"
+    aliases: ["RSD", "relative standard deviation"]
+    category: "方法学参数"
+  - term: "线性范围"
+    aliases: ["linearity", "线性"]
+    category: "方法学参数"
+  - term: "相关系数"
+    aliases: ["r", "R²", "r²", "决定系数"]
+    category: "方法学参数"
+  - term: "基质效应"
+    aliases: ["matrix effect", "基质干扰"]
+    category: "方法学参数"
+  - term: "定性判定"
+    aliases: ["定性确认", "定性鉴别", "定性分析"]
+    category: "分析方法"
+  - term: "定量测定"
+    aliases: ["定量分析", "定量检测"]
+    category: "分析方法"
+  - term: "保留时间"
+    aliases: ["RT", "retention time"]
+    category: "色谱参数"
+  - term: "监测离子对"
+    aliases: ["MRM", "多反应监测", "母离子", "子离子", "定性离子", "定量离子"]
+    category: "质谱参数"
+  - term: "化妆品基质类型"
+    aliases: ["膏霜类", "乳液类", "水类", "精油类", "蜡基类", "粉类", "唇膏类", "指甲油类"]
+    category: "样品分类"
+  - term: "CAS号"
+    aliases: ["CAS登录号", "CAS Registry Number"]
+    category: "标识编码"
+  - term: "相对分子质量"
+    aliases: ["分子量", "molecular weight", "MW"]
+    category: "化学属性"
+  - term: "资料性附录"
+    aliases: ["informative appendix"]
+    category: "标准附录类型"
+  - term: "规范性附录"
+    aliases: ["normative appendix"]
+    category: "标准附录类型"

@@ -1,0 +1,53 @@
+# 化妆品标准基础检查规则
+# 适用于所有化妆品标准类型的基础审查
+
+# 必要章节（无论何种标准类型都应具备）
+required_sections:
+  - name: "范围"
+    description: "标准的适用范围说明，描述标准规定的对象和适用边界"
+    keywords: ["范围"]
+    level: "critical"
+  - name: "规范性引用文件"
+    description: "列出标准中引用的其他标准文件"
+    keywords: ["规范性引用文件", "规范性引用"]
+    level: "major"
+
+# 文档结构基本要求
+structure_rules:
+  - name: "封面信息完整"
+    check: "应包含标准号、标准名称、发布日期、实施日期"
+    level: "critical"
+  - name: "前言内容"
+    check: "前言应说明标准制定的依据（如采用的国际标准）和主要技术变化"
+    level: "major"
+  - name: "章节编号连续"
+    check: "章节编号应连续，不应有跳号或重复编号"
+    level: "critical"
+
+# 语言文字规则
+language_rules:
+  - name: "用词规范"
+    check: "应使用标准的科技用语，避免口语化表述"
+    level: "minor"
+  - name: "量与单位"
+    check: "应使用法定计量单位（GB 3100系列）"
+    level: "major"
+  - name: "数值表达"
+    check: "数值范围应使用波浪号'~'，不用破折号'-'"
+    level: "minor"
+  - name: "标准号格式"
+    check: "标准号中各部分之间应有空格，如 '化妆品安全技术规范 2015'"
+    pattern: "[A-Z]{1,3}/T?\\s+\\d+\\.?\\d*\\s*-\\s*\\d{4}"
+    level: "minor"
+
+# 图表规则
+figure_table_rules:
+  - name: "图表编号"
+    check: "图和表应有编号，从每章重新开始（如图1、表2）"
+    level: "major"
+  - name: "图表标题"
+    check: "图标题在图下方，表标题在表上方"
+    level: "major"
+  - name: "图表引用"
+    check: "正文中应先引用图和表，再出现图和表"
+    level: "minor"

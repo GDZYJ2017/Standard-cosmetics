@@ -1,0 +1,153 @@
+# 化妆品/牙膏检验方法专属格式规则
+# 基于国家药监局已发布检验方法文档结构分析
+
+doc_type: "inspection_method"
+
+# 文档类型识别关键词
+type_keywords:
+  - "检验方法"
+  - "Determination of"
+  - "Test method"
+  - "化妆品中"
+  - "牙膏中"
+
+# 必要章节（检验方法文档应具备）
+required_sections:
+  - name: "范围"
+    description: "描述检验方法的适用对象和检测范围"
+    keywords: ["范围"]
+    level: "critical"
+    pattern: "本方法规定了"
+  - name: "方法提要"
+    description: "检验方法的原理概述，包含检出限和定量下限"
+    keywords: ["方法提要", "方法原理", "原理"]
+    level: "critical"
+    required_elements:
+      - name: "检出限"
+        keywords: ["检出限", "LOD"]
+        level: "critical"
+      - name: "定量下限"
+        keywords: ["定量下限", "LOQ", "最低定量浓度"]
+        level: "critical"
+  - name: "试剂和材料"
+    description: "检验所需的试剂、标准品和材料"
+    keywords: ["试剂", "材料", "试剂和材料", "试剂材料"]
+    level: "critical"
+  - name: "仪器和设备"
+    description: "检验所需的仪器设备"
+    keywords: ["仪器", "设备", "仪器和设备"]
+    level: "critical"
+  - name: "分析步骤"
+    description: "完整的分析操作步骤"
+    keywords: ["分析步骤", "操作步骤", "测定步骤"]
+    level: "critical"
+    required_subsections:
+      - name: "标准溶液制备"
+        keywords: ["标准溶液", "标准储备液", "标准工作溶液"]
+        level: "major"
+      - name: "样品处理"
+        keywords: ["样品处理", "样品制备", "样品前处理", "试样处理", "试样制备"]
+        level: "critical"
+      - name: "仪器条件"
+        keywords: ["仪器参考条件", "色谱条件", "质谱条件"]
+        level: "critical"
+  - name: "计算"
+    description: "分析结果计算公式和精密度数据"
+    keywords: ["计算", "分析结果的表述", "结果计算", "结果表述"]
+    level: "critical"
+    required_elements:
+      - name: "回收率"
+        keywords: ["回收率", "加标回收"]
+        level: "major"
+      - name: "精密度"
+        keywords: ["精密度", "相对标准偏差", "RSD"]
+        level: "major"
+
+# 可选章节
+optional_sections:
+  - name: "图谱"
+    keywords: ["图谱", "色谱图"]
+  - name: "附录A"
+    keywords: ["附录A", "附录 A"]
+    description: "标准品信息表（资料性附录）"
+  - name: "附录B"
+    keywords: ["附录B", "附录 B"]
+    description: "补充确证方法（规范性附录）"
+
+# 章节编号规范
+numbering_rules:
+  - name: "章编号格式"
+    check: "章编号使用阿拉伯数字：1, 2, 3..."
+    pattern: "^\\d+\\s+\\S"
+    level: "critical"
+  - name: "条编号格式"
+    check: "条编号使用 X.Y 格式，如 5.1, 5.2"
+    pattern: "^\\d+\\.\\d+\\s+\\S"
+    level: "major"
+  - name: "附录编号格式"
+    check: "附录使用大写字母编号：附录A, 附录B"
+    pattern: "^附录[A-Z]"
+    level: "major"
+  - name: "编号连续"
+    check: "章编号应连续，不跳号"
+    level: "critical"
+
+# 标题格式规范
+title_rules:
+  - name: "标题简明"
+    check: "章节标题应简明扼要，避免过长"
+    max_length: 30
+    level: "minor"
+  - name: "中英文对照"
+    check: "标准标题应有中英文对照"
+    keywords: ["Determination of", "Test method"]
+    level: "suggestion"
+
+# 语言规范（检验方法特有）
+language_rules:
+  - name: "定量表述规范"
+    check: "取样量应使用'精确至X.XXXXg'格式"
+    pattern: "精确至\\d+\\.\\d+g"
+    level: "minor"
+  - name: "试剂纯度标注"
+    check: "有机溶剂应标注纯度等级"
+    keywords: ["色谱纯", "分析纯", "优级纯"]
+    level: "major"
+  - name: "滤膜孔径标注"
+    check: "过滤步骤应标注滤膜孔径，单位应使用希腊字母μ（μm），不能用ASCII字母um"
+    keywords: ["0.22", "0.45", "µm", "μm", "微孔滤膜"]
+    bad_keywords: ["um", " Um", " UM"]  # 常见错误写法
+    level: "major"
+  - name: "离心条件完整"
+    check: "离心操作应标注转速和时间"
+    pattern: "\\d+\\s*r/min.*\\d+\\s*min"
+    level: "minor"
+  - name: "标准品引用格式"
+    check: "引用标准品信息时应标注'详见附录'"
+    pattern: "详见附录"
+    level: "major"
+  - name: "数值范围使用波浪号"
+    check: "数值范围应使用波浪号'~'，不用破折号'-'"
+    level: "minor"
+
+# 附录表格规范（标准品信息表）
+appendix_table_rules:
+  - name: "标准品信息表必备列"
+    check: "附录A标准品信息表应包含：序号、中文名称、英文名称、CAS号"
+    required_columns: ["序号", "中文名称", "英文名称", "CAS号", "分子式", "纯度"]
+    level: "major"
+  - name: "表格编号"
+    check: "表格应有编号"
+    level: "major"
+  - name: "表格标题"
+    check: "表标题应在表格上方"
+    level: "major"
+
+# 图谱规范
+figure_rules:
+  - name: "图谱编号"
+    check: "图谱应有编号（如图1、图2）"
+    level: "major"
+  - name: "图谱标题"
+    check: "图谱标题应说明图谱内容（如化合物名称+图谱类型）"
+    level: "major"

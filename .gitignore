@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.env
+*.db
+*.db-journal
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (前端构建)
+node_modules/
+dist/
+build/
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# 数据文件（不上传到 Git）
+data/uploads/
+data/reports/
+data/*.db
+data/*.log
+
+# Docker
+.docker/
+
+# 调试文件
+_debug*
+_ast_debug*
+_class_*

@@ -1,0 +1,20 @@
+[railway]
+[railway.variables]
+PORT = 8000
+
+[railway.upstream]
+name = "cosmetic-standard-backend"
+description = "化妆品标准智能审查系统后端 API"
+
+[railway.deployment]
+# 健康检查路径
+healthcheckPath = "/"
+healthcheckPort = 8000
+
+# 启动命令
+startCommand = "python -m uvicorn backend.main:app --host 0.0.0.0 --port ${PORT}"
+
+[railway.disk]
+# 持久化存储（用于上传文件和数据库）
+name = "data"
+mountPath = "/app/data"

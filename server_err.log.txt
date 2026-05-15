@@ -1,0 +1,24 @@
+C:\Users\dell\WorkBuddy\Claw\backend\main.py:69: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Will watch for changes in these directories: ['C:\\Users\\dell\\WorkBuddy\\Claw']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [8608] using WatchFiles
+INFO:     Started server process [9840]
+INFO:     Waiting for application startup.
+INFO:main:标准审查助手启动完成
+INFO:     Application startup complete.
+INFO:watchfiles.main:2 changes detected
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'backend\main.py'. Reloading...
+INFO:services.review_service:文档类型识别: inspection_method (title=化妆品中甲基泼尼松等122种激素类组分的测定)
+INFO:services.review_service:多参考模式：2 份参考标准 -> 化妆品中6α-甲基氢化可的松等124种原料的检验方法 / 化妆品中普鲁卡因胺等23种原料的检验方法
+INFO:httpx:HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:services.review_service:共识合成完成: 两份化妆品原料检验方法标准在核心框架和技术原理上高度一致：均采用高效液相色谱-质谱法，定性依据保留时间和特征离子对相对丰度比，定量采用标准曲线法；均明确适用范围、试剂纯度（分析纯及以上，GB/T 66
+INFO:httpx:HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+ERROR:services.ai_service:AI 返回内容 JSON 解析失败: Unterminated string starting at: line 163 column 42 (char 7360)
+ERROR:services.review_service:AI 共识审查异常（跳过）: name 'CONSENSUS_INSPECTION_COMPARE_PROMPT' is not defined

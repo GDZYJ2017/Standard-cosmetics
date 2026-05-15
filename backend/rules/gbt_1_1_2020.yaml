@@ -1,0 +1,93 @@
+# 化妆品标准格式规则
+# 用于化妆品标准格式合规性检查的规则配置
+
+# 章节顺序规则（部分→整体）
+chapter_order:
+  - name: "封面"
+    required: true
+    number: "cover"
+  - name: "前言"
+    required: true
+    number: "preface"
+  - name: "引言"
+    required: false
+    number: "introduction"
+  - name: "范围"
+    required: true
+    number: "1"
+    keywords: ["范围"]
+  - name: "规范性引用文件"
+    required: false
+    number: "2"
+    keywords: ["规范性引用文件", "规范性引用"]
+  - name: "术语和定义"
+    required: false
+    number: "3"
+    keywords: ["术语", "定义", "术语和定义"]
+  - name: "技术内容（核心章节）"
+    required: true
+    number: "4"
+    keywords: []
+  - name: "附录"
+    required: false
+    number: "appendix"
+    keywords: ["附录"]
+
+# 编号规则
+numbering_rules:
+  - name: "章编号规则"
+    check: "章应使用阿拉伯数字编号，从1开始"
+    pattern: "^\\d+$"
+    level: 1
+  - name: "条编号规则"
+    check: "条的编号由章编号加上'.X'构成，如 4.1"
+    pattern: "^\\d+\\.\\d+$"
+    level: 2
+  - name: "段编号规则"
+    check: "段的编号由条编号加上'.X'构成，如 4.1.1"
+    pattern: "^\\d+\\.\\d+\\.\\d+$"
+    level: 3
+
+# 标题格式规则
+title_format_rules:
+  - name: "标题不应包含标点符号"
+    check: "除问号、叹号外，标题末尾不应使用标点符号"
+    forbidden_endings: ["。", "，", "；", "：", ".", ","]
+    level: "major"
+  - name: "标题不应使用悬置段"
+    check: "所有标题下应有正文内容，不应出现悬置段"
+    level: "major"
+  - name: "章标题格式"
+    check: "章标题应简洁，一般不超过15个字"
+    max_length: 20
+    level: "minor"
+
+# 术语规则
+terminology_rules:
+  - name: "术语章节编号"
+    check: "术语和定义应从第3章开始（如3.1、3.2）"
+    pattern: "^3\\.\\d+$"
+  - name: "术语应有定义"
+    check: "每个术语条目必须包含明确的定义说明"
+    level: "critical"
+  - name: "术语不应缩写"
+    check: "术语条目中不应使用未定义过的缩写"
+    level: "major"
+
+# 引用格式规则
+reference_rules:
+  - name: "标准引用格式"
+    check: "引用标准应使用完整的标准号，如《化妆品安全技术规范》"
+    pattern: "^[A-Z]{1,3}/T?\\s*\\d+\\.?\\d*-\\d{4}$"
+  - name: "标准号应在规范性引用文件中列出"
+    check: '正文中引用的所有标准均应在第2章"规范性引用文件"中列出'
+    level: "major"
+
+# 段落与排版
+formatting_rules:
+  - name: "段落编号"
+    check: "标准中的条、段应有正确的层级编号"
+  - name: "列表格式"
+    check: "列表项应使用破折号或字母编号"
+  - name: "注和脚注格式"
+    check: "注和脚注应编号，脚注从每页重新开始编号"

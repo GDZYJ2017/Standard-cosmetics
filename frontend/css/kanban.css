@@ -1,0 +1,73 @@
+/* ================================================
+   看板视图样式
+   ================================================ */
+.kanban-col {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    min-height: 180px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban-col-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.kanban-count {
+    background: rgba(255,255,255,0.08);
+    border-radius: 9999px;
+    padding: 1px 7px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.kanban-cards {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.kanban-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.kanban-card:hover {
+    border-color: rgba(26, 86, 219, 0.3);
+    box-shadow: 0 2px 8px rgba(26, 86, 219, 0.08);
+}
+
+.kanban-empty {
+    text-align: center;
+    padding: 20px 12px;
+    color: var(--text-muted);
+    font-size: 12px;
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-sm);
+}
+
+/* 看板整体垂直填充可用空间 */
+.kanban-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    align-items: stretch;   /* 列高度拉伸对齐 */
+    min-height: calc(100vh - 260px);
+}
